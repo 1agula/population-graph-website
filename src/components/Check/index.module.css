@@ -20,6 +20,16 @@
   transition: all 0.3s;
 }
 
+.container input {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  opacity: 0;
+}
+
 label:hover {
   border: 2px solid #6a5acd;
   color: #6a5acd;
@@ -43,16 +53,6 @@ input:checked + label {
   background-color: #6a5acd;
   color: #fff;
   transition: all 1s;
-}
-
-.container input {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  opacity: 0;
 }
 
 @media (max-width: 1100px) {

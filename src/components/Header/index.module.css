@@ -2,12 +2,12 @@
   padding: 20px;
 }
 
-h1 {
+.title {
   color: #555;
 }
 
 @media (max-width: 770px) {
-  h1 {
+  .title {
     font-size: 1.5rem;
   }
 }

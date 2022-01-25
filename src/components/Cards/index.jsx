@@ -16,16 +16,20 @@ export default function Cards({ prefDetail }) {
               {pref.prefData.map((detail) => {
                 return (
                   <li key={detail.label}>
-                    {detail.label +
-                      ": " +
-                      detail.data.find(({ year }) => {
-                        return year === selectedYear;
-                      })?.value}
+                    {detail.label}: &nbsp;
+                    <span>
+                      {detail.data
+                        .find(({ year }) => {
+                          return year === selectedYear;
+                        })
+                        .value.toLocaleString("en-US")}
+                    </span>
                   </li>
                 );
               })}
             </ul>
             <select
+              className={styles.selecter}
               name="years"
               id="years"
               onChange={(e) => {

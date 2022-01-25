@@ -22,7 +22,7 @@ export default function Chart({ checked }) {
           ? dataset
           : [
               {
-                label: "未選択",
+                label: "地域を選択してください",
               },
             ],
       }}
