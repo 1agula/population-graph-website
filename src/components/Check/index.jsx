@@ -2,7 +2,7 @@ import { useEffect, useState, Fragment } from "react";
 import styles from "./index.module.css";
 import { fetchPref } from "../../api";
 
-export default function Check({ handleCheck }) {
+export default function Check({ handleCheckBox }) {
   const [pref, setPref] = useState();
 
   useEffect(() => {
@@ -13,21 +13,22 @@ export default function Check({ handleCheck }) {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <ul>
       {pref?.map(({ prefCode, prefName }) => {
         return (
-          <Fragment key={prefCode}>
+          <li key={prefCode}>
             <input
+              id={prefCode}
               name={prefCode}
               type="checkbox"
               onChange={() => {
-                handleCheck({ prefCode, prefName });
+                handleCheckBox({ prefCode, prefName });
               }}
             />
             <label htmlFor={prefCode}>{prefName}</label>
-          </Fragment>
+          </li>
         );
       })}
-    </div>
+    </ul>
   );
 }
