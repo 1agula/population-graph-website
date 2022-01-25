@@ -17,7 +17,9 @@ export default function App() {
     return color;
   };
 
+  // Check componentでチェックを入れた都道府県の人口構成データをAPIから取得する関数
   const handleCheckBox = async (pref) => {
+    // すでにチェック入れてた場合はstateの配列から削除し、チェックされず配列に存在しない場合はAPIから取得したデータと共にstateの配列に追加する
     if (checked.some((previous) => pref.prefName === previous.prefName)) {
       setChecked(
         checked.filter((previous) => pref.prefName !== previous.prefName)

@@ -18,6 +18,7 @@ export default function Cards({ prefDetail }) {
                   <li key={detail.label}>
                     {detail.label}: &nbsp;
                     <span>
+                      {/* セレクトボックスで指定された年の詳細人口数を取得する */}
                       {detail.data
                         .find(({ year }) => {
                           return year === selectedYear;

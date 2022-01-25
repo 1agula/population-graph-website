@@ -3,6 +3,7 @@ import axios from "axios";
 const url = process.env.REACT_APP_API_URL;
 const key = process.env.REACT_APP_API_KEY;
 
+// 都道府県データを取得する
 export const fetchPref = async () => {
   try {
     const {
@@ -16,6 +17,7 @@ export const fetchPref = async () => {
   }
 };
 
+// 指定された都道府県の人口構成データを取得する
 export const fetchPop = async (prefCode) => {
   try {
     const {
