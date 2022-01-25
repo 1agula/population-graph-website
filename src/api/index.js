@@ -26,7 +26,7 @@ export const fetchPop = async (prefCode) => {
         headers: { "X-API-KEY": key },
       }
     );
-    return result.data[0].data;
+    return result.data;
   } catch (err) {
     console.log(err);
   }

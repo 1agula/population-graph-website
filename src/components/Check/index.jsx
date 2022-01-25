@@ -1,4 +1,4 @@
-import { useEffect, useState, Fragment } from "react";
+import { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import { fetchPref } from "../../api";
 
@@ -13,7 +13,7 @@ export default function Check({ handleCheckBox }) {
   }, []);
 
   return (
-    <ul>
+    <ul className={styles.container}>
       {pref?.map(({ prefCode, prefName }) => {
         return (
           <li key={prefCode}>
