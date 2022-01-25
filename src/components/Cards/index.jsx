@@ -29,6 +29,7 @@ export default function Cards({ prefDetail }) {
               })}
             </ul>
             <select
+              defaultValue={2020}
               className={styles.selecter}
               name="years"
               id="years"
@@ -37,19 +38,11 @@ export default function Cards({ prefDetail }) {
               }}
             >
               {pref.prefData[0].data.map(({ year }) => {
-                if (year === 2020) {
-                  return (
-                    <option value={year} key={year} selected>
-                      {year + "年"}
-                    </option>
-                  );
-                } else {
-                  return (
-                    <option value={year} key={year}>
-                      {year + "年"}
-                    </option>
-                  );
-                }
+                return (
+                  <option value={year} key={year}>
+                    {year + "年"}
+                  </option>
+                );
               })}
             </select>
           </div>
