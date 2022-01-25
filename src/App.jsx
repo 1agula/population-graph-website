@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cards, Chart, Check } from "./components";
+import { Header, Cards, Chart, Check } from "./components";
 import styles from "./App.module.css";
 import { fetchPop } from "./api";
 
@@ -30,6 +30,7 @@ export default function App() {
 
   return (
     <div className={styles.container}>
+      <Header />
       <Chart checked={checked} />
       <Check handleCheckBox={handleCheckBox} />
       <Cards />
