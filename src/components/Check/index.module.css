@@ -1,8 +1,9 @@
 .container {
   list-style: none;
   font-size: 14px;
-  width: 80%;
   padding: 20px;
+  width: 100%;
+  text-align: center;
 }
 .container li {
   position: relative;
@@ -53,15 +54,4 @@ input:checked + label {
   background-color: #6a5acd;
   color: #fff;
   transition: all 1s;
-}
-
-@media (max-width: 1100px) {
-  .container {
-    width: 90%;
-  }
-}
-@media (max-width: 770px) {
-  .container {
-    width: 100%;
-  }
 }
