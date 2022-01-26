@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Header, Cards, Chart, Check } from "./components";
+import { Header, CardContainer, Chart, Check } from "./components";
 import styles from "./App.module.css";
 import { fetchPop } from "./api";
 
@@ -43,7 +43,7 @@ export default function App() {
       <Header />
       <Chart checked={checked} />
       <Check handleCheckBox={handleCheckBox} />
-      <Cards prefDetail={prefDetail} />
+      <CardContainer prefDetail={prefDetail} />
     </div>
   );
 }
