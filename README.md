@@ -33,7 +33,7 @@ npm install
 
 ```shell
 REACT_APP_API_KEY = *RESASから発行された、APIキーを入力する*
-REACT_APP_API_KEY = *RESAS APIのurlを入力する*
+REACT_APP_API_URL = *RESAS APIのurlを入力する*
 ```
 
 build する
