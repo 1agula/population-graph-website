@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const url = process.env.REACT_APP_API_URL;
 const key = process.env.REACT_APP_API_KEY;
@@ -9,11 +9,11 @@ export const fetchPref = async () => {
     const {
       data: { result },
     } = await axios.get(`${url}/v1/prefectures`, {
-      headers: { "X-API-KEY": key },
+      headers: { 'X-API-KEY': key },
     });
     return result;
   } catch (err) {
-    console.log(err);
+    return console.log(err);
   }
 };
 
@@ -25,11 +25,11 @@ export const fetchPop = async (prefCode) => {
     } = await axios.get(
       `${url}/v1/population/composition/perYear?prefCode=${prefCode}`,
       {
-        headers: { "X-API-KEY": key },
+        headers: { 'X-API-KEY': key },
       }
     );
     return result.data;
   } catch (err) {
-    console.log(err);
+    return console.log(err);
   }
 };

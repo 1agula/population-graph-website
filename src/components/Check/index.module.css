@@ -37,7 +37,7 @@ label:hover {
 }
 
 label::before {
-  content: "+";
+  content: '+';
   display: inline-block;
   font-weight: 900;
   transition: transform 0.3s ease-in-out;
@@ -45,7 +45,7 @@ label::before {
 }
 
 input:checked + label::before {
-  content: "✓";
+  content: '✓';
   transform: rotate(-360deg);
   transition: transform 0.3s ease-in-out;
 }

@@ -1,16 +1,34 @@
-import styles from "./index.module.css";
-import { Chart as ChartJS } from "chart.js/auto";
-import { Line } from "react-chartjs-2";
+import PropTypes from 'prop-types';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
+import styles from './index.module.css';
 
 export default function Chart({ checked }) {
-  let dataset = checked.map((arr) => {
-    return {
-      data: arr.prefData.map(({ value }) => value),
-      label: arr.prefName,
-      borderColor: arr.borderColor,
-      fill: true,
-    };
-  });
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+  );
+
+  const dataset = checked.map((arr) => ({
+    data: arr.prefData.map(({ value }) => value),
+    label: arr.prefName,
+    borderColor: arr.borderColor,
+    fill: true,
+  }));
 
   const lineChart = (
     <Line
@@ -22,7 +40,7 @@ export default function Chart({ checked }) {
           ? dataset
           : [
               {
-                label: "地域を選択してください",
+                label: '地域を選択してください',
               },
             ],
       }}
@@ -31,3 +49,7 @@ export default function Chart({ checked }) {
 
   return <div className={styles.container}>{lineChart}</div>;
 }
+
+Chart.propTypes = {
+  checked: PropTypes.instanceOf(Array).isRequired,
+};

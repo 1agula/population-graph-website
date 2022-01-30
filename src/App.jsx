@@ -1,17 +1,17 @@
-import { useState } from "react";
-import { Header, CardContainer, Chart, Check } from "./components";
-import styles from "./App.module.css";
-import { fetchPop } from "./api";
+import { useState } from 'react';
+import { Header, CardContainer, Chart, Check } from './components';
+import styles from './App.module.css';
+import { fetchPop } from './api';
 
 export default function App() {
   const [checked, setChecked] = useState([]);
   const [prefDetail, setprefDetail] = useState([]);
 
-  //random color for chart border
+  // random color for chart border
   const getRandomColor = () => {
-    var letters = "0123456789ABCDEF".split("");
-    var color = "#";
-    for (var i = 0; i < 6; i++) {
+    const letters = '0123456789ABCDEF'.split('');
+    let color = '#';
+    for (let i = 0; i < 6; i += 1) {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
@@ -34,7 +34,7 @@ export default function App() {
         ...checked,
         { ...pref, prefData: prefData[0].data, borderColor: getRandomColor() },
       ]);
-      setprefDetail([...prefDetail, { ...pref, prefData: prefData }]);
+      setprefDetail([...prefDetail, { ...pref, prefData }]);
     }
   };
 

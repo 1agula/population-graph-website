@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
-import styles from "./index.module.css";
-import { fetchPref } from "../../api";
+import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { fetchPref } from '../../api';
+import styles from './index.module.css';
 
 export default function Check({ handleCheckBox }) {
   const [pref, setPref] = useState();
@@ -14,21 +15,23 @@ export default function Check({ handleCheckBox }) {
 
   return (
     <ul className={styles.container}>
-      {pref?.map(({ prefCode, prefName }) => {
-        return (
-          <li key={prefCode}>
-            <input
-              id={prefCode}
-              name={prefCode}
-              type="checkbox"
-              onChange={() => {
-                handleCheckBox({ prefCode, prefName });
-              }}
-            />
-            <label htmlFor={prefCode}>{prefName}</label>
-          </li>
-        );
-      })}
+      {pref?.map(({ prefCode, prefName }) => (
+        <li key={prefCode}>
+          <input
+            id={prefCode}
+            name={prefCode}
+            type="checkbox"
+            onChange={() => {
+              handleCheckBox({ prefCode, prefName });
+            }}
+          />
+          <label htmlFor={prefCode}>{prefName}</label>
+        </li>
+      ))}
     </ul>
   );
 }
+
+Check.propTypes = {
+  handleCheckBox: PropTypes.func.isRequired,
+};
