@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/population-graph-website/static/css/main.272fbf3f.css",
-    "main.js": "/population-graph-website/static/js/main.a40b751f.js",
+    "main.js": "/population-graph-website/static/js/main.396f511f.js",
     "index.html": "/population-graph-website/index.html",
     "main.272fbf3f.css.map": "/population-graph-website/static/css/main.272fbf3f.css.map",
-    "main.a40b751f.js.map": "/population-graph-website/static/js/main.a40b751f.js.map"
+    "main.396f511f.js.map": "/population-graph-website/static/js/main.396f511f.js.map"
   },
   "entrypoints": [
     "static/css/main.272fbf3f.css",
-    "static/js/main.a40b751f.js"
+    "static/js/main.396f511f.js"
   ]
 }
