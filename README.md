@@ -13,14 +13,14 @@
 
 ## Demo Website
 
-https://sudopain.github.io/population-graph-website/
+https://1agula.github.io/population-graph-website/
 
 ## 使用手順
 
 Github からソースコードを clone する
 
 ```shell
-git clone https://github.com/sudopain/population-graph-website.git
+git clone https://github.com/1agula/population-graph-website.git
 ```
 
 dependencies をインストールする

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://opendata.resas-portal.go.jp:80",
-  "homepage": "https://sudopain.github.io/population-graph-website",
+  "homepage": "https://1agula.github.io/population-graph-website",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
